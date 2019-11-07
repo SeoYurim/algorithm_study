@@ -1,21 +1,45 @@
+# 문제
+# n가지 종류의 동전이 있다. 이 동전들을 적당히 사용해서, 그 가치의 합이 k원이 되도록 하고 싶다. 그러면서 동전의 개수가 최소가 되도록 하려고 한다. 각각의 동전은 몇 개라도 사용할 수 있다.
+
+# 사용한 동전의 구성이 같은데, 순서만 다른 것은 같은 경우이다.
+
+# 입력
+# 첫째 줄에 n, k가 주어진다. (1 ≤ n ≤ 100, 1 ≤ k ≤ 10,000) 다음 n개의 줄에는 각각의 동전의 가치가 주어진다. 동전의 가치는 100,000보다 작거나 같은 자연수이다. 가치가 같은 동전이 여러 번 주어질 수도 있다.
+
+# 출력
+# 첫째 줄에 사용한 동전의 최소 개수를 출력한다. 불가능한 경우에는 -1을 출력한다.
+
 n, k = map(int, input().split())
 
-c_value = []
-total_val = []
+coin = []
+min_num = []   # k원을 만들기 위한 동전의 최소 개수
+coin.sort()
 
-for i in range(1, k+1):
-    total_val.append(100001)
-total_val[0] = 0
+# 동전의 가치 k <= 100000
+# 따라서 k원을 만들기 위한 동전의 최대 개수 : 100001
+# list 초기 setting 
+    # k = 0일때, min_num = 0 (0원을 만드는 데에는 0개의 동전 필요)
+    # 1 ~ k원 : 100001로 초기값 설정 (최소값을 찾기 위해 비교대상 설정)
+for i in range(1, k+2):
+    min_num.append(100001)
+min_num[0] = 0
 
 for i in range(n):
-    c_value.append(int(input()))
+    coin.append(int(input()))
 
+
+# 입력받은 coin별로 나눠서 생각
+# 최소값 찾아냄
+# 예) 5원을 만들기 위한 동전의 최소개수 찾아낼때,
+    # 1원 * 5개 = 5원   => 5개
+    # 5원 * 1개 = 5원   => 1개
+
+        #후자를 선택해야함
+        
 for i in range(n):
-    for j in range(c_value[i], k+1):
-        m = min(total_val[j-c_value[i]] + 1, total_val[j])
-        total_val.insert(j, m)
-print(m)
-if total_val[k] == 100001:
-    total_val[k] = -1
-else:
-    print(total_val[k])
+    for j in range(coin[i], k+1):
+        min_num[j] = min(min_num[j], min_num[j-coin[i]]+1)
+
+if min_num[k] == 100001:
+    min_num[k] = -1
+print(min_num[-1])
