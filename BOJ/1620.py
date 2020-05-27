@@ -6,20 +6,24 @@
 # 출력
 # 첫째 줄부터 차례대로 M개의 줄에 각각의 문제에 대한 답을 말해줬으면 좋겠어!!!. 입력으로 숫자가 들어왔다면 그 숫자에 해당하는 포켓몬의 이름을, 문자가 들어왔으면 그 포켓몬의 이름에 해당하는 번호를 출력하면 돼. 그럼 땡큐~
 
-N, M = input().split()
+import sys
 
-pocket_list = []
-pocket_dic = {}
+N, M = map(int, input().split())
 
-for i in range(int(N)):
-  pocket_name = str(input())
-  pocket_list.append(pocket_name)
-  pocket_dic[pocket_name] = i+1
+number_pokemon = 1
+pokemon_dict1 = dict()
+pokemon_dict2 = dict()
 
-for i in range(int(M)):
-  q = input()
+for _ in range(N):
+    name = str(sys.stdin.readline()).strip()
+    pokemon_dict1[number_pokemon] = name
+    pokemon_dict2[name] = number_pokemon
+    number_pokemon += 1
 
-  if q.isdigit():
-    print(pocket_list[int(q)-1])
-  else:
-    print(pocket_dic[q])
+answer = []
+for _ in range(M):
+    pokemon = str(sys.stdin.readline()).strip()
+    try:
+        print(pokemon_dict1[int(pokemon)])
+    except:
+        print(pokemon_dict2[pokemon])

@@ -8,10 +8,10 @@
 # 첫째 줄에 자리수를 내림차순으로 정렬한 수를 출력한다.
 
 num = input("num : ")
-answer=''
+answer = ''
 sort_num = sorted(num, reverse=True)
 
 for i in sort_num:
-  answer += i
+    answer += i
 
 print(int(answer))
