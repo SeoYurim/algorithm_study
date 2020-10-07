@@ -1,11 +1,18 @@
 # algorithm_study
+[Algorithm] coding test 준비하기
 
-### "challenge" branch 확인
+### Day001 
+#### [PROGRAMMERS] 해시 : 전화번호 목록(python)
 
-문제 풀이 설명은 블로그에서 진행하도록 하겠습니다.
+* sort() 활용해서 접두어가 같은 숫자끼리 및 문자열 길이로 정렬 후 비교
+* 똑똑한 사람들이 많은거 같다,,
+* 문제 : https://programmers.co.kr/learn/courses/30/lessons/42577
 
-👇블로그 주소👇
 
-https://velog.io/@dek1313/series/boj-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4
+### Day001 
+#### [PROGRAMMERS] 해시 : 완주하지 못한 사람(python)
 
-✔️ 1일 1문제
+* 처음에 이중 for문으로 하니까 효율성 통과 못함
+* hash / dict 활용
+* Counter => 중복되는 단어 개수 찾을 때 활용
+* 문제 : https://programmers.co.kr/learn/courses/30/lessons/42576
