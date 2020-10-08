@@ -16,3 +16,16 @@
 * hash / dict 활용
 * Counter => 중복되는 단어 개수 찾을 때 활용
 * 문제 : https://programmers.co.kr/learn/courses/30/lessons/42576
+
+
+### Day002
+#### [PROGRAMMERS] 해시 : 위장(python)
+
+* 같은 카테고리끼리 묶고 경우의 수를 생각하기
+* lambda : 익명함수
+* reduce() : 여러개의 데이터를 대상으로 주로 누적 집계를 내기 위해 사용
+`reduce(집계 함수, 순회 가능한 데이터[, 초기값])`
+
+```python
+reduce(lambda x, y: x*(y+1), cnt.values(), 1)
+```
