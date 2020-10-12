@@ -24,8 +24,20 @@
 * 같은 카테고리끼리 묶고 경우의 수를 생각하기
 * lambda : 익명함수
 * reduce() : 여러개의 데이터를 대상으로 주로 누적 집계를 내기 위해 사용
+
 `reduce(집계 함수, 순회 가능한 데이터[, 초기값])`
 
 ```python
 reduce(lambda x, y: x*(y+1), cnt.values(), 1)
 ```
+* 문제 : https://programmers.co.kr/learn/courses/30/lessons/42578
+
+
+### Day003
+#### [PROGRAMMERS] 힙 : 더 맵게(python)
+
+* python의 heapq모듈을 활용하여 heap을 만들기
+* heapq.heapify() => heap으로 만들어 준다
+* heapq.heappop() => 가장 우선순위가 높은 노드(=가장 작은 노드) 삭제
+
+* 문제 : https://programmers.co.kr/learn/courses/30/lessons/42626
