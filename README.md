@@ -41,3 +41,12 @@ reduce(lambda x, y: x*(y+1), cnt.values(), 1)
 * heapq.heappop() => 가장 우선순위가 높은 노드(=가장 작은 노드) 삭제
 
 * 문제 : https://programmers.co.kr/learn/courses/30/lessons/42626
+
+
+### Day004
+#### [PROGRAMMERS] 정렬 : K번째 수(python) level1
+
+* map과 sort를 활용하면 한줄로 끝나는 문제
+* map이나 reduce 등 간단하게 쓸 수 있는 함수에 대해 더 공부해야 될 것 같다.
+
+* 문제 : https://programmers.co.kr/learn/courses/30/lessons/42748
