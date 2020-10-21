@@ -48,5 +48,21 @@ reduce(lambda x, y: x*(y+1), cnt.values(), 1)
 
 * map과 sort를 활용하면 한줄로 끝나는 문제
 * map이나 reduce 등 간단하게 쓸 수 있는 함수에 대해 더 공부해야 될 것 같다.
+* map 함수 활용
 
+`list(map(함수, 리스트))`
+* 예시)
+```python
+## 실수로 구성된 리스트의 요소들을 정수로 변환
+## float -> int
+a = [1.2, 2.5, 3.7, 4.6]
+for i in range(len(a)):
+  a[i] = int(a[i])
+```
+map함수를 활용하면 더 간단해집니다.
+
+```python
+a = [1.2, 2.5, 3.7, 4.6]
+a = list(map(int, a))
+```
 * 문제 : https://programmers.co.kr/learn/courses/30/lessons/42748
