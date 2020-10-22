@@ -66,3 +66,13 @@ a = [1.2, 2.5, 3.7, 4.6]
 a = list(map(int, a))
 ```
 * 문제 : https://programmers.co.kr/learn/courses/30/lessons/42748
+
+### Day005
+#### [PROGRAMMERS] 정렬 : 가장 큰 수(python) level2
+
+* map, lambda 써서 해결한 문제
+* 문제의 조건을 잘 읽고 해결할 수 있는 방법을 찾기
+* numbers.sort(key=lambda x: (x*4)[:4], reverse=True)
+* x*4[:4]를 기준으로 정렬 => key활용
+
+* 문제 : https://programmers.co.kr/learn/courses/30/lessons/42746
