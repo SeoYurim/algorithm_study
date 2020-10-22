@@ -76,3 +76,11 @@ a = list(map(int, a))
 * x*4[:4]를 기준으로 정렬 => key활용
 
 * 문제 : https://programmers.co.kr/learn/courses/30/lessons/42746
+
+### Day005
+#### [PROGRAMMERS] 정렬 : H-index(python) level2
+
+* 문제 너무 헷갈려,,,
+* h에 대한 기준을 잡기
+
+* 문제 : https://programmers.co.kr/learn/courses/30/lessons/42747
